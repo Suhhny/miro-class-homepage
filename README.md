@@ -5,9 +5,9 @@
 
 ## pages
 
-* 메인 
-* Code Sharing board - writing, list, show 
-* Class board - writing, list, show 
-* register
+> 메인  </br>
+> Code Sharing board - writing, list, show </br>
+> Class board - writing, list, show </br>
+> register  </br>
 
 
