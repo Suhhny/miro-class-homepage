@@ -1,0 +1,45 @@
+{
+  "name": "webprojectsetting",
+  "version": "1.0.0",
+  "description": "Ailtos Co., Ltd Web Project Setting Webpack4 babel7",
+  "main": "index.js",
+  "scripts": {
+    "webpack-p": "webpack --mode production",
+    "webpack-d": "webpack --mode development",
+    "clear": "rm -rf ./dist",
+    "build": "npm run clear && babel ./ --out-dir dist --ignore .babelrc,.gitignore,package.json,package-lock.json,node_modules,public,src,webpack.config.js",
+    "start": "npm run build && node ./dist/main.js",
+    "test": "npm run webpack-d && npm start"
+  },
+  "keywords": [],
+  "author": "Ailtos Co., Ltd",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.1",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "redux-logger": "^3.0.6",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "immutable": "^3.8.2",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.15",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-actions": "^2.6.1",
+    "redux-thunk": "^2.3.0",
+    "webpack": "^4.19.0"
+  }
+}
