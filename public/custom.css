@@ -1,0 +1,27 @@
+/* input label focus color */
+#entrance:focus {
+    color: #000000;
+}
+
+/* input label underline focus color */
+#entrance:focus {
+    border-bottom: 1px solid #fff000;
+    box-shadow: 0 1px 0 0 #fff000;
+}
+
+
+/* radio button checkd color */
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
+  border: 2px solid #fff000;
+}
+
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:after {
+  background-color: #fff000;
+}
+
+h2, h3, h4, h5, h6, p {
+  font-family: 'jeju Gothic', serif;
+}
