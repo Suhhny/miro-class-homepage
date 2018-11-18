@@ -53,7 +53,7 @@ class Register extends Component {
                     </form>
                 </div>
                 <div className="container" style={{ display: 'flex', justifyContent: 'center', alignItems:"center", marginBottom: "30px"}}>
-                    <a className="waves-effect waves-light btn" style={{width: '250px', height: '40px', backgroundColor: '#A6A5A6'}}>가입하기</a>
+                    <a className="waves-effect waves-light btn" style={{width: '250px', height: '40px', backgroundColor: '#A6A5A6'}}><h6>가입하기</h6></a>
                 </div>
             </div>
             </div>

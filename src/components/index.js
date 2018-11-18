@@ -11,9 +11,11 @@ import MyComment from './MyComment';
 import MyPageMenu from './MyPageMenu';
 import Register from './Register';
 import UserIntro from './UserIntro';
+import Admin from './Admin';
 
 export {
     Activity,
+    Admin,
     BoardCard,
     BoardList,
     BoardShow,

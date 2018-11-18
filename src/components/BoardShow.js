@@ -5,8 +5,14 @@ class BoardShow extends Component{
     render(){
         return(
             <div>
-                <div style={{ backgroundColor: "#333333" }}>
-                    <img src="../assets/mirologo.png" alt="mirologo" style={{ width: "60px", marginLeft:"30px" }}/>
+                <div style={{ height: "60px", backgroundColor: "#333333", display: "flex", flexDirection: "row"}}>
+                    <div style={{ height: "60px", backgroundColor: "#333333"}}>
+                        <img src="../assets/mirologo.png" alt="mirologo" style={{width: "60px", marginLeft:"30px"}}/>
+                    </div>
+                    <div style={{ width: "20px" }}></div>
+                    <div style={{ display: "flex", alignItems: "center"}}>
+                        <a><h6 style={{ color: "#ABABAB" }}>목록으로</h6></a>
+                    </div>
                 </div>
                 <div style={{ backgroundColor: "#333333", display: "flex", justifyContent: "center"}}>
                     <div style={{ backgroundColor: "#333333", display: "flex", flexDirection: "column", justifyContent: "flex-start", width: "65%"}}>
@@ -57,7 +63,25 @@ class BoardShow extends Component{
                         </div>
 
                         {/* Comment */}
-                        <Comment />
+                        <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start", marginBottom: "20px"}}>
+                            <div className="comments" style={{ display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center"}}>
+                                <div style={{ width: "20px"}}></div>
+                                <div style={{ width: "40px", height: "40px"}}>
+                                    <img src="../assets/profile-default.png" 
+                                        alt="profile" style={{ width: "40px", height: "auto", borderRadius: "100%", display: "inline"}}/>
+                                </div>
+                                <div style={{ width: "10px"}}></div>
+                                <div style={{ display: "flex", flexDirection: "column"}}>
+                                    <h6 style={{ margin: "0px", color: "#ababab"}}>김수현</h6>
+                                    <p style={{ margin: "0px 0px 0px 1px", color: "#ababab", fontSize: "12px"}}>2018년 11월 17일</p>
+                                </div>
+                                <div style={{ width: "10px"}}></div>
+                                <a className="btn-flat" style={{ color: "#fff000"}}>답글</a>
+                            </div>
+                            <div style={{ marginLeft: "70px" }}>
+                                <h6 style={{ color: "#FFFFFF" }}>귀엽당</h6>
+                            </div>
+                        </div>
                         <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start", marginBottom: "20px"}}>
                             <div className="comments" style={{ display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "flex-end"}}>
                                 <div style={{ width: "20px"}}></div>
@@ -77,6 +101,7 @@ class BoardShow extends Component{
                                 <h6 style={{ color: "#FFFFFF" }}>와~ 잘만들었다~ 장관이고요~ 신이주신 선물이고 절경입니다~ 장관이네요~ 절경이고요~</h6>
                             </div>
                         </div>
+                        <Comment />
                         {/* Comment End */}
                     </div>
                 </div>

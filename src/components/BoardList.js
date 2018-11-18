@@ -22,7 +22,7 @@ class BoardList extends Component {
                         <div style={{ backgroundColor: "#fff000", width: "60px", height: "3px"}}> </div>
                     </div>
                 </div>
-                <div style={{ backgroundColor: "#333333", display: "flex", flexFlow: "row wrap", justifyContent: "center", marginTop: "40px"}}>
+                <div style={{ backgroundColor: "#333333", display: "flex", flexFlow: "row wrap", justifyContent: "center", marginTop: "45px"}}>
                     <div style={{margin: "23px"}}>
                         <BoardCard />
                     </div>
