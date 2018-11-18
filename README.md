@@ -3,11 +3,16 @@
 ## Base
 > webpack 4.19.0, babel 7.0.0 for **ES8, React**
 
-## pages
+### Pages - Components
 
-> 메인  </br>
-> Code Sharing board - writing, list, show </br>
-> Class board - writing, list, show </br>
-> register  </br>
+> Entrance Page - Login, Register </br>
+> Main Page - UserIntro, BoardList(BoardCards) </br>
+> MyPage - MyPageMenu, Activity, MyBoard, MyComment </br>
+> Write Page - MarkDown Editor  </br>
+> BoardShow Page - BoardShow, Comment  </br>
+> Administrator Page - ControlUsers, ControlTags </br>
 
+### API
+
+### Models
 
