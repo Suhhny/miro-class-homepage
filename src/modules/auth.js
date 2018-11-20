@@ -1,18 +1,18 @@
-import { createAction, handleActions } from 'redux-actions';
-import { Map } from 'immutable';
+// import { createAction, handleActions } from 'redux-actions';
+// import { Map } from 'immutable';
 
-const EX = 'auth/EX';
+// const EX = 'auth/EX';
 
-const ex = createAction(EX);
+// const ex = createAction(EX);
 
-const initialState = Map({
+// const initialState = Map({
 
-});
+// });
 
-const reducer = handleActions({
-    [EX]: (state, action) => {
+// const reducer = handleActions({
+//     [EX]: (state, action) => {
 
-    },
-}, initialState);
+//     },
+// }, initialState);
 
-export default reducer;
+// export default reducer;

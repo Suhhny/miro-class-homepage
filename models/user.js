@@ -10,8 +10,11 @@ const User = monsoose.Schema({
     studentId: { type: Number },
     sex: { type: Boolean },     // true: female, false: male
     admin: { type: Boolean },    // true: admin, false: not admin
+    description: { type: String },
     authorized: { type: Boolean },
-    profile_image: { type: String }
+    profile_image: { type: String },
+    boards: { type: String },
+    comments: { type: String }
 });
 
 export const key = '2018miroSuhhny';

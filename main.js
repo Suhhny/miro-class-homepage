@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 import path from 'path';
 
 import mongoose from 'mongoose';
-// mongoose.connect('', { useNewUrlParser: true });
+mongoose.connect('', { useNewUrlParser: true });
 
 import api from './routes';
 app.use('/api', api);
