@@ -32,22 +32,20 @@ router.post('/', async (req, res) => {
     const { addTag } = req.body;
 
     try{
-        const tag = await Tags.findOne({}).catch(() => res.status(500).json({ success: false, error: 0 }));
+        // const tag = new Tags({
+        //     tags: addTag
+        // });
 
+        const tag = await Tags.updateOne({}, {$push: {tags: addTag}});
+        const updated_tag = await Tags.findOne({}).catch(() => res.status(500).json({ success: false, error: 0 }));
+        
         if(!tag){
             return res.status(404).json({ success: false, error: 1 });
         }
 
-        if(tag.tags.length!==0){
-            tag.tags.push(addTag);
-        }else{
-            tag.tags[0] = addTag;
-        }
-
-        await Tags.save().catch(() => res.status(500).json({ success: false, error: 0 }));
-
-        console.log(tag.tags);
-        return res.status(200).json({ success: true, tag });
+        // await tag.save().catch(() => res.status(500).json({ success: false, error: 0 }));
+        
+        return res.status(200).json({ success: true, tag: updated_tag.tags });
 
     }catch(err){
         console.log(err);

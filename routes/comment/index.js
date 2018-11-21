@@ -10,7 +10,10 @@ router.use('/dislike', dislike);
 import like from './like';
 router.use('/like', like);
 
-import write from './list';
+import write from './write';
 router.use('/write', write);
+
+import list from './list';
+router.use('/list', list);
 
 export default router;

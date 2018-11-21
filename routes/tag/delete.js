@@ -28,11 +28,11 @@ const router = express.Router();
 
 import { Tags } from '../../models';
 
-router.delete('/', async (req, res) => {
+router.post('/', async (req, res) => {
     const { deleteTag } = req.body;
 
     try{
-        const tag = await Tags.find({}).catch(() => res.status(500).json({ success: false, error: 0 }));
+        const tag = await Tags.findOne({}).catch(() => res.status(500).json({ success: false, error: 0 }));
         
         if(!tag){
             return res.status(404).json({ success: false, error: 1 });
@@ -41,11 +41,12 @@ router.delete('/', async (req, res) => {
         let index = await tag.tags.indexOf(deleteTag);
         let array1 = await tag.tags.slice(0, index);
         let array2 = await tag.tags.slice(index+1);
+
         tag.tags = array1.concat(array2);
 
-        console.log(tag.tags);
-        
-        return res.status(200).json({ success: true, tag });
+        await tag.save().catch(() => res.status.json({ success: false, error: "으악 싫다!"}))
+
+        return res.status(200).json({ success: true, tag: tag.tags });
     }catch(err){
         console.log(err);
         return res.status(500).json({ success: false, error: 0 });

@@ -1,13 +1,13 @@
 import express from 'express';
 const router = express.Router();
 
-import _class from './class';
-router.use('/class', _class);
+import comment from './comment';
+router.use('/comment', comment);
 
-import share from './share';
-router.use('/share', share);
+import log from './log';
+router.use('/log', log);
 
-import user from './user';
-router.use('/user', user);
+import tag from './tag';
+router.use('/tag', tag);
 
 export default router;

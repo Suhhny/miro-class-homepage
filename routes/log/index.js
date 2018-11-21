@@ -10,4 +10,7 @@ router.use('/board', board);
 import comment from './comment';
 router.use('/comment', comment);
 
+import alarmDelete from './alarmDelete';
+router.use('/alarmdelete', alarmDelete);
+
 export default router;

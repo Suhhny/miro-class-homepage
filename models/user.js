@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import crypto from 'crypto';
 
-const User = monsoose.Schema({
+const User = mongoose.Schema({
     email: { type: String },
     password: { type: String },
     salt: { type: String },

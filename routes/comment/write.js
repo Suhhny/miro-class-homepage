@@ -17,6 +17,7 @@
     res.data: {
         success: Bool
         comment: { Comment }
+        activity: { Activity }
     }
 
     ERRORCODES
@@ -42,7 +43,7 @@ router.post('/', async (req, res) => {
            author: name
         });
         await comment.save().catch(() => res.status(500).json({ success: false, error: 0 }));
-
+        
         let mother;
         if(type!==false){
             mother = await Board.findOne({ _id: _super });
@@ -58,7 +59,7 @@ router.post('/', async (req, res) => {
         
         await activity.save().catch(() => res.status(500).json({ success: false, error: 0 }))
         
-        return res.status(201).json({ success: true, comment });
+        return res.status(201).json({ success: true, comment, activity });
 
     }catch(err){
         console.log(err);

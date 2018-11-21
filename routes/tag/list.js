@@ -27,13 +27,13 @@ import { Tags } from '../../models';
 
 router.get('/', async (req, res) => {
     try{
-        const tag = await Tags.find({}).catch(() => res.status(500).json({ success: false, error: 0 }));
+        const tag = await Tags.findOne({}).catch(() => res.status(500).json({ success: false, error: 0 }));
         
         if(!tag){
             return res.status(404).json({ success: false, error: 1 });
         }
 
-        return res.status(200).json({ success: true, tag });
+        return res.status(200).json({ success: true, tag: tag.tags });
 
     }catch(err){
         console.log(err);
