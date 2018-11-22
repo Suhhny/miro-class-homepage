@@ -9,12 +9,12 @@ const User = monsoose.Schema({
     major: { type: String },
     studentId: { type: Number },
     sex: { type: Boolean },     // true: female, false: male
-    admin: { type: Boolean },    // true: admin, false: not admin
-    description: { type: String },
-    authorized: { type: Boolean },
-    profile_image: { type: String },
-    boards: { type: String },
-    comments: { type: String }
+    admin: { type: Boolean, default: false },   // true: admin
+    description: { type: String, default: '' },
+    authorized: { type: Boolean, default: false },
+    profile_image: { type: String, default: '' },
+    boards: { type: Number, default: 0 },
+    comments: { type: Number, default: 0 }
 });
 
 export const key = '2018miroSuhhny';

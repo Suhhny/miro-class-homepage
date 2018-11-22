@@ -5,7 +5,7 @@ const Comment = new mongoose.Schema({
     content: { type: String },
     date: { type: String },
     alarm: { type: String },
-    type: { type: Boolean, default: true },  //true: belong to board, false: belong to comment
+    type: { type: Boolean },  //true: belong to board, false: belong to comment
     super: { type: String }    // _id
 });
 
