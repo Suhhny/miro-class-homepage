@@ -13,13 +13,13 @@ class App extends Component {
     }
 }
 
-App.propTypes = {
+// App.propTypes = {
 
-}
+// }
 
-App.defaultProps = {
+// App.defaultProps = {
 
-}
+// }
 
 const mapStateToProps = (state) => {
     return {};

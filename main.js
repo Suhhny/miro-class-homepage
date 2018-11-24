@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 import path from 'path';
 
 import mongoose from 'mongoose';
-mongoose.connect('', { useNewUrlParser: true });
+mongoose.connect('mongodb://suhhny:suhhny6@ds151383.mlab.com:51383/test-2', { useNewUrlParser: true });
 
 import api from './routes';
 app.use('/api', api);
