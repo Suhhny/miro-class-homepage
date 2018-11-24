@@ -1,31 +1,31 @@
-import Activity from './Activity';
-import BoardCard from './BoardCard';
-import BoardList from './BoardList';
-import BoardShow from './BoardShow';
-import Comment from './Comment';
-import ControlTags from './ControlTags';
-import ControlUsers from './ControlUsers';
 import Login from './Login';
-import MyBoard from './MyBoard';
-import MyComment from './MyComment';
-import MyPageMenu from './MyPageMenu';
 import Register from './Register';
 import UserIntro from './UserIntro';
+import BoardCard from './BoardCard';
+import BoardList from './BoardList';
+import MyPageMenu from './MyPageMenu';
+import MyBoard from './MyBoard';
+import MyComment from './MyComment';
+import Activity from './Activity';
+import BoardShow from './BoardShow';
+import Comment from './Comment';
+import ControlUsers from './ControlUsers';
+import ControlTags from './ControlTags';
 import Admin from './Admin';
 
 export {
-    Activity,
     Admin,
+    Login,
+    Register,
+    UserIntro,
     BoardCard,
     BoardList,
-    BoardShow,
-    Comment,
-    ControlTags,
-    ControlUsers,
-    Login,
+    MyPageMenu,
     MyBoard,
     MyComment,
-    MyPageMenu,
-    Register,
-    UserIntro
+    Activity,
+    BoardShow,
+    Comment,
+    ControlUsers,
+    ControlTags
 }
