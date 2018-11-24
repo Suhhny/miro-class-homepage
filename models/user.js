@@ -14,7 +14,8 @@ const User = mongoose.Schema({
     authorized: { type: Boolean, default: false },
     profile_image: { type: String, default: '' },
     boards: { type: Number, default: 0 },
-    comments: { type: Number, default: 0 }
+    comments: { type: Number, default: 0 },
+    alert: { type:Number, default: 0 }
 });
 
 export const key = '2018miroSuhhny';

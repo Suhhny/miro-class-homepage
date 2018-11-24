@@ -29,7 +29,6 @@
 
 import express from 'express';
 const router = express.Router();
-import jwt from 'jwt';
 
 import { User } from '../../models';
 import { key } from '../../models/user';
@@ -47,9 +46,8 @@ router.post('/', async (req, res) => {
         user.password = user.generateHash(password, salt);
 
         await user.save();
-        const token = jwt.sign({ uid: user._id, name });
 
-        return res.status(204).json({ success: true, account: { _id: user._id, email, major, sex, studentId, token } });
+        return res.status(204).json({ success: true })
     }catch(err){    
         return res.status(500).json({ success: false, error: 0 });
     }

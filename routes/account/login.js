@@ -41,9 +41,10 @@ router.post('/', async (req, res) => {
             return res.status(409).json({ success: false, error: 2 });
         }
 
-        const { _id, name, major, studentId, sex, admin, description, authorized, profile_image, boards, comments } = user;
-        const token = jwt.sign({ uid:_id, name, major, studentId, sex, admin, description, authorized, profile_image, boards, comments });
-        return res.status(200).json({ success: true, account: _id, email, name, major, studentId, sex, admin, token })
+        const { _id, studentId, admin, authorized } = user;
+        const token = jwt.sign({ uid:_id, studentId, admin, authorized, alert, name, profile_image,  });
+        return res.status(200).json({ success: true, 
+            account: { _id, authorized, admin, name, email, alert, major, studentId, sex, description, profile_image, boards, comments }, token})
     }catch(err){    
         return res.status(500).json({ success: false, error: 0 });
     }
