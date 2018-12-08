@@ -8,7 +8,7 @@ class Activity extends Component {
                             boxShadow: "0 8px 38px hsla(0,0%,52%,.3), 0 5px 12px hsla(0,0%,52%,.22)",
                             display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center"}}>
                     <div style={{ flexGrow: "1", height: "60px"}}>
-                        <img src="../assets/profile.png" 
+                        <img src="../assets/profile.png"
                             alt="profile" style={{ width: "60px", height: "60px", borderRadius: "100%", marginLeft: "15px"}}/>
                     </div>
                     <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", flexGrow: "8"}}>

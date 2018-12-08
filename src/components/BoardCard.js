@@ -11,7 +11,7 @@ class BoardCard extends Component {
                     </div>
                     <div style={{ display: "flex", flexDirection: "column", width: "240px"}}>
                         <div style={{ display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center", margin: "10px 0px 0px 30px", height: "30px"}}>
-                            <img src="../assets/profile.png" 
+                            <img src="../assets/profile.png"
                                 alt="profile" style={{ width: "20px", height: "auto", borderRadius: "100%", display: "inline"}}/>
                             <p style={{ color: "#6496e5", fontSize: "13px"}}>&nbsp;&nbsp; Suhhny</p>
                         </div>
@@ -27,7 +27,6 @@ class BoardCard extends Component {
                                 <p style={{ display: "inline", color: "#c6c6c6"}}>개</p>
                             </span>
                         </div>
-
                     </div>
                 </div>
         );
